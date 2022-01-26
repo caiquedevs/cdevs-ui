@@ -1,11 +1,25 @@
 import React, { ButtonHTMLAttributes, ReactNode } from 'react';
-import { Btn, BtnProps } from './styles';
+import { Btn } from './styles';
 
-interface IProps extends ButtonHTMLAttributes<HTMLButtonElement>  {
+export interface BtnProps {
+  height?: string;
+  width?: string;
+  padding?: string;
+  margin?: string;
+
+  bgColor?: string;
+  color?: string;
+  loading?: any;
+  txtTransform?: 'uppercase' | 'capitalize' | 'lowercase';
+  fontWeight?: string | number;
+  fontSize?: string;
+  borderRadius?: string;
+  disabled: boolean;
+
   children: ReactNode;
 }
 
-export function Button(props: IProps & BtnProps) {
+export function Button(props: BtnProps) {
   return (
     <Btn {...props}>
       {props.children}

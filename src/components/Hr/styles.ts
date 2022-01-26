@@ -1,13 +1,5 @@
-import styled, { css } from "styled-components";
-
-export interface StyleProps {
-  width?: string;
-  height?: string;
-  margin?: string;
-  borderColor?: string;
-
-  label?: string;
-}
+import styled, { css } from 'styled-components';
+import { StyleProps } from '../Hr';
 
 export const Container = styled.div<StyleProps>`
   ${(props) => css`
@@ -36,8 +28,8 @@ export const Container = styled.div<StyleProps>`
 `;
 
 Container.defaultProps = {
-  margin: "0px",
-  height: "1px",
-  width: "500px",
-  borderColor: "#bdbdbd",
+  margin: '0px',
+  height: '1px',
+  width: '500px',
+  borderColor: '#bdbdbd',
 };

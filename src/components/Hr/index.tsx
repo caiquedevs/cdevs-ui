@@ -1,5 +1,14 @@
-import React, { ReactElement } from "react";
-import { Container, StyleProps } from "./styles";
+import React, { ReactElement } from 'react';
+import { Container } from './styles';
+
+export interface StyleProps {
+  width?: string;
+  height?: string;
+  margin?: string;
+  borderColor?: string;
+
+  label?: string;
+}
 
 export function Hr({ label, ...props }: StyleProps): ReactElement {
   return (

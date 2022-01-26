@@ -1,12 +1,10 @@
 import React, { InputHTMLAttributes, ReactElement } from 'react';
 import { Label } from './styled';
 
-export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {}
-
 export interface InputProps {
   label?: string;
   error: string | number | boolean | null | undefined;
-  inputProps: IInputProps;
+  inputProps: InputHTMLAttributes<HTMLInputElement>;
 }
 
 export function Input({ label, error, inputProps, ...props }: InputProps): ReactElement {

@@ -1,20 +1,5 @@
-import styled, { css } from "styled-components";
-
-export interface BtnProps {
-  height?: string;
-  width?: string;
-  padding?: string;
-  margin?: string;
-
-  bgColor?: string;
-  color?: string;
-  loading?: any;
-  txtTransform?: "uppercase" | "capitalize" | "lowercase";
-  fontWeight?: string | number;
-  fontSize?: string;
-  borderRadius?: string;
-  disabled: boolean;
-}
+import styled, { css } from 'styled-components';
+import { BtnProps } from '../Button';
 
 export const Btn = styled.button<BtnProps>`
   ${(props) => css`
@@ -57,13 +42,13 @@ export const Btn = styled.button<BtnProps>`
 `;
 
 Btn.defaultProps = {
-  width: "auto",
-  height: "auto",
-  padding: "0px",
-  margin: "0px",
+  width: 'auto',
+  height: 'auto',
+  padding: '0px',
+  margin: '0px',
 
-  color: "#000000",
+  color: '#000000',
   fontWeight: 600,
-  txtTransform: "uppercase",
-  bgColor: "transparent",
+  txtTransform: 'uppercase',
+  bgColor: 'transparent',
 };

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 import { BtnCheck } from './styles';
 
-interface Props {
+interface CheckBoxProps {
   option: any;
   checked: any;
   onChange: (value: string) => void;
@@ -16,7 +16,7 @@ export function CheckBox({
   checked,
   label,
   disabled,
-}: Props): ReactElement {
+}: CheckBoxProps): ReactElement {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(option);
   };
