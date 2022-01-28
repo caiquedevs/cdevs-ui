@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Select from 'react-select';
 
 export const Label = styled.label`
   width: 300px;
@@ -10,10 +11,12 @@ export const Label = styled.label`
   span {
     font-size: 16px;
     line-height: 139.8%;
-    color: ${({ theme }) => theme.text.title};
+    color: 'silver';
   }
 
   span.error {
-    color: ${({ theme }) => theme.primary};
+    color: orange;
   }
 `;
+
+export const ReactSelect = styled(Select)``;

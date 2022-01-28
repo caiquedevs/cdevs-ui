@@ -1,6 +1,5 @@
 import React from 'react';
-import Select from 'react-select';
-import { Label } from './styles';
+import { Label, ReactSelect } from './styles';
 
 interface IOption {
   label: string | number | null | undefined;
@@ -18,13 +17,13 @@ interface SelectProps {
   components?: any;
 }
 
-function SelectComponent(props: SelectProps) {
+export function Select(props: SelectProps) {
   const customStyles = {
     control: (base: any, state: any) => ({
       ...base,
-      background: 'red',
+      background: 'silver',
       borderRadius: state.isFocused ? '5px 5px 0 0' : 5,
-      borderColor: props.error ? 'red' : 'transparent',
+      borderColor: props.error ? 'orange' : 'transparent',
       paddingTop: 4,
       paddingBottom: 3,
       paddingLeft: 6,
@@ -36,21 +35,21 @@ function SelectComponent(props: SelectProps) {
     }),
     placeholder: (provided: any) => ({
       ...provided,
-      color: 'red',
+      color: 'black',
       fontSize: 17,
     }),
     singleValue: (provided: any) => ({
       ...provided,
-      color: 'red',
+      color: 'black',
     }),
     indicatorSeparator: (base: any) => ({
       ...base,
-      display: 'none',
+      display: 'black',
     }),
     indicatorsContainer: () => ({
       '.myDropDown': {
         '&__dropdown-indicator': {
-          color: 'red',
+          color: 'black',
           '&:hover': {
             opacity: 1,
           },
@@ -59,12 +58,13 @@ function SelectComponent(props: SelectProps) {
     }),
     option: (base: any, state: any) => ({
       ...base,
-      color: state.isSelected ? 'red' : 'red',
+      color: state.isSelected ? 'black' : 'silver',
       paddingTop: 12,
       paddingBottom: 12,
-      background: state.isSelected ? 'red' : 'red',
+      background: state.isSelected ? 'silver' : 'white',
       '&:hover': {
-        background: 'red',
+        background: 'silver',
+        color: 'black',
         cursor: 'pointer',
       },
     }),
@@ -72,7 +72,7 @@ function SelectComponent(props: SelectProps) {
       ...base,
       borderRadius: 0,
       marginTop: 5,
-      background: 'red',
+      background: 'black',
     }),
     menuList: (base: any) => ({
       ...base,
@@ -83,7 +83,7 @@ function SelectComponent(props: SelectProps) {
   return (
     <Label>
       {props.label && <span>{props.label}</span>}
-      <Select
+      <ReactSelect
         options={props.options}
         components={props.components}
         value={props.value}
@@ -99,8 +99,6 @@ function SelectComponent(props: SelectProps) {
   );
 }
 
-SelectComponent.defaultProps = {
+Select.defaultProps = {
   value: null,
 };
-
-export default SelectComponent;
