@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Grid } from '../src';
+import { Grid } from '../Grid';
 
 const imgStyles: CSSProperties = {
   width: '100%',

@@ -1,7 +1,7 @@
-import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import { Btn } from './styles';
 
-export interface BtnProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   height?: string;
   width?: string;
   padding?: string;
@@ -15,11 +15,9 @@ export interface BtnProps {
   fontSize?: string;
   borderRadius?: string;
   disabled: boolean;
-
-  children: ReactNode;
 }
 
-export function Button(props: BtnProps) {
+export function Button(props: ButtonProps) {
   return (
     <Btn {...props}>
       {props.children}

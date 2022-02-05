@@ -1,7 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { storiesOf } from '@storybook/react';
-import { RowProps } from '../src/components/Row';
-import { Row } from '../src';
+import { Row, RowProps } from '../Row';
 
 const imgStyles: CSSProperties = {
   width: '100%',

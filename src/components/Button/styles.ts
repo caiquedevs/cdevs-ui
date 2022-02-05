@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { BtnProps } from '../Button';
+import { ButtonProps } from '../Button';
 
-export const Btn = styled.button<BtnProps>`
+export const Btn = styled.button<ButtonProps>`
   ${(props) => css`
     width: ${props.width};
     height: ${props.height};

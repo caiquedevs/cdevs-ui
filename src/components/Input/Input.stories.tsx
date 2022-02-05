@@ -1,7 +1,7 @@
 import React, { useState, CSSProperties, ChangeEvent } from 'react';
 import { storiesOf } from '@storybook/react';
 import { MdSearch } from 'react-icons/md';
-import { Input } from '../src';
+import { Input } from '../Input';
 
 const inputStyle: CSSProperties = {};
 
