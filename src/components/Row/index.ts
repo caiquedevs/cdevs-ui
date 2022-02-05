@@ -2,7 +2,9 @@ import styled, { css } from 'styled-components';
 import { SpaceProps } from '../../interfaces/spaces';
 import { FlexProps } from '../../interfaces/flex';
 
-export const Row = styled.div<SpaceProps & FlexProps>`
+export interface RowProps extends SpaceProps, FlexProps {}
+
+export const Row = styled.div<RowProps>`
   ${(props) => css`
     width: ${props.width};
     height: ${props.height};
